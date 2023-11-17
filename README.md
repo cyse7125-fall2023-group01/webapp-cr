@@ -5,12 +5,11 @@
   <!-- Optional: Add a brief description of your API here -->
   <p align="center">A REST API for managing HTTP checks, written in Golang.</p>
 
-
-  
 </div>
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [About](#about)
 - [API Endpoints](#api-endpoints)
   - [Create HTTP Check](#create-http-check)
@@ -18,12 +17,12 @@
   - [Delete HTTP Check](#delete-http-check)
   - [Get All HTTP Checks](#get-all-http-checks)
   - [Get HTTP Check by ID](#get-http-check-by-id)
+- [Authentication and Authorization](#authentication-and-authorization)
 - [Getting Started](#getting-started)
-
 
 ## About
 
-RESTful service to chek the health status 
+RESTful service to chek the health status
 
 ## API Endpoints
 
@@ -81,8 +80,6 @@ RESTful service to chek the health status
 
 ## Getting Started
 
-
-
 ```bash
 
 
@@ -92,3 +89,4 @@ $ cd http-check
 # Build and run the Golang API
 $ go build
 $ ./http-check
+```
