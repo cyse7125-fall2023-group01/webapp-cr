@@ -6,7 +6,7 @@
   <p align="center">A REST API for managing HTTP checks, written in Golang.</p>
 
 </div>
-
+  
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
