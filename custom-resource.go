@@ -52,7 +52,7 @@ func createCustomResource(check HTTPCheck) error {
 		Group:    "monitoring.httpcheck.io",
 		Version:  "v1alpha1",
 		Resource: "cronjobs",
-	}).Namespace("default").Create(context.Background(), u, metav1.CreateOptions{})
+	}).Namespace("webapp").Create(context.Background(), u, metav1.CreateOptions{})
 	if err != nil {
 		return err
 	}
@@ -79,7 +79,7 @@ func deleteCustomResource(Name string) error {
 		Group:    "monitoring.httpcheck.io",
 		Version:  "v1alpha1",
 		Resource: "cronjobs",
-	}).Namespace("default").Delete(context.Background(), Name, metav1.DeleteOptions{})
+	}).Namespace("webapp").Delete(context.Background(), Name, metav1.DeleteOptions{})
 	if err != nil {
 		return err
 	}
@@ -106,7 +106,7 @@ func updateCustomResource(check HTTPCheck) error {
 		Group:    "monitoring.httpcheck.io",
 		Version:  "v1alpha1",
 		Resource: "cronjobs",
-	}).Namespace("default").Get(context.Background(), check.Name, metav1.GetOptions{})
+	}).Namespace("webapp").Get(context.Background(), check.Name, metav1.GetOptions{})
 	if err != nil {
 		return err
 	}
@@ -145,7 +145,7 @@ func updateCustomResource(check HTTPCheck) error {
 		Group:    "monitoring.httpcheck.io",
 		Version:  "v1alpha1",
 		Resource: "cronjobs",
-	}).Namespace("default").Update(context.Background(), u, metav1.UpdateOptions{})
+	}).Namespace("webapp").Update(context.Background(), u, metav1.UpdateOptions{})
 	if err != nil {
 		return err
 	}
