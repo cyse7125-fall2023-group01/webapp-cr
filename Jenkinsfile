@@ -81,5 +81,20 @@ pipeline {
                 }
             }
         }
+        stage('helm release or upgrade') {
+            steps {
+                script {
+                    sh'rm -rf webapp-helm-chart'
+                    
+                    sh 'git clone https://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@github.com/cyse7125-fall2023-group01/webapp-helm-chart.git'
+                    sh 'pwd'
+                    sh 'helm upgrade --install --namespace webapp webapp ./webapp-helm-chart'
+                    sh 'ls'
+                
+                    
+                    
+                }
+            }
+        }
     }
 }
